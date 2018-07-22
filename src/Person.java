@@ -1,4 +1,3 @@
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,7 +13,7 @@ public class Person {
 	private String surname;
 	private List<String> emails = new ArrayList<>();
 	private Address address;
-	private BigInteger netWorth;
+	private Integer netWorth;
 
 	public Person() {
 	}
@@ -29,11 +28,11 @@ public class Person {
 		this.emails = emails;
 	}
 
-	public BigInteger getNetWorth() {
-		return netWorth != null ? netWorth : new BigInteger("0");
+	public Integer getNetWorth() {
+		return netWorth != null ? netWorth : 0;
 	}
 
-	public void setNetWorth(BigInteger netWorth) {
+	public void setNetWorth(Integer netWorth) {
 		this.netWorth = netWorth;
 	}
 
@@ -109,7 +108,7 @@ class TestPerson {
 		System.out.println(person.getFullName());
 		System.out.println("Printing city: " + person.getCity());
 		System.out.println("Net worth: " + person.getNetWorth());
-		person.setNetWorth(new BigInteger("1000000"));
+		person.setNetWorth(1000000);
 		System.out.println("Net worth: " + person.getNetWorth());
 		person.printFirstEmail();
 		person.addEmail("test@test.com");
