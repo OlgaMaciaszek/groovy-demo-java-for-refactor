@@ -1,0 +1,1 @@
+Sample Java code to be used to refactoring it into Groovy during a demo.
